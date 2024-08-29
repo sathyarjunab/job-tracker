@@ -1,0 +1,14 @@
+{
+  "env": {
+    "DB_NAME": "job-tracker",
+    "DB_USERNAME": "root",
+    "DB_PASSWORD": "Sathyarjun@123",
+    "DB_HOST": "localhost",
+    "TOKEN_SECRET": "a@dv#v$d%vd^d&vd*dv(dv)vd!dv@dv1234567890-=!@#$%^&*()_+#$v%dvKJD$%^&*()!@)(*&^%$#@#$%^&*()",
+    "BUCKET_NAME": "satexpense",
+    "IAM_USER_KEY": "AKIAS252WKJ5Q32GBGMZ",
+    "IAM_USER_SECRET": "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",
+    "AWS_REGION": "ap-southeast-2",
+    "EMAIL_API": "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"
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="./dashBoard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="profile-logo" onclick="toggleSideBlock()">☰</div>
+      </header>
+
+      <!-- Side Block -->
+      <div class="side-block" id="sideBlock">
+        <a href="../account/account.html">Account</a>
+        <a href="../stats/stats.html">Stats</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Search and Filter Block -->
+        <div class="search-filter-block">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search by company name or job title"
+          />
+          <button class="filter-button" onclick="toggleFilter()">⚙️</button>
+        </div>
+        <!-- Filter Options Block -->
+        <div class="filter-options" id="filterOptions">
+          <label for="statusFilter">Status:</label>
+          <select id="statusFilter">
+            <option value="">All</option>
+            <option value="applied">Applied</option>
+            <option value="interviewed">Interviewed</option>
+            <option value="offered">Offered</option>
+            <option value="rejected">Rejected</option>
+          </select>
+
+          <label for="roleFilter">Company Size:</label>
+          <input type="number" id="roleFilter" placeholder="Company Size" />
+
+          <label for="dateFilter">Date of Application:</label>
+          <input type="date" id="dateFilter" />
+
+          <button class="apply-filters-btn" onclick="applyFilters()">
+            Apply Filters
+          </button>
+        </div>
+
+        <!-- Job List Block -->
+        <div id="jobList" class="job-list">
+          <!-- Job items will be dynamically added here -->
+        </div>
+
+        <button class="add-job-btn" onclick="openAddJobModal()">Add Job</button>
+
+        <!-- Status Summary Block -->
+        <div class="status-summary" id="statusSummary">
+          <!-- Status breakdown will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="addJobModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add Job</h2>
+          <span class="modal-close" onclick="closeModal('addJobModal')">×</span>
+        </div>
+        <form id="addJobForm" enctype="multipart/form-data">
+          <label>Company Name:</label>
+          <input type="text" name="companyName" required /><br />
+          <label>Job Title:</label>
+          <input type="text" name="jobTitle" required /><br />
+          <label>Application Date:</label>
+          <input type="date" name="applicationDate" required /><br />
+          <label>Status:</label>
+          <select name="status" required>
+            <option value="applied">Applied</option>
+            <option value="interviewed">Interviewed</option>
+            <option value="offered">Offered</option>
+            <option value="rejected">Rejected</option></select
+          ><br />
+          <label>Contact Details:</label>
+          <textarea name="contactDetails"></textarea><br />
+          <label>Company Size:</label>
+          <input type="text" name="companySize" /><br />
+          <label>Industry:</label>
+          <input type="text" name="industry" /><br />
+          <label>Description:</label>
+          <textarea name="description"></textarea><br />
+          <label>Resume:</label>
+          <input type="file" name="resume" /><br />
+          <button>Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="jobModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Job Details</h2>
+          <span class="modal-close" onclick="closeModal('jobModal')">×</span>
+        </div>
+        <div id="jobDetails">
+          <!-- Job details will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./dashboard.js"></script>
+  </body>
+</html>

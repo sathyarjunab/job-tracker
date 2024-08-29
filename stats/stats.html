@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Stats</title>
+    <link rel="stylesheet" href="./stats.css" />
+    <script defer src="./stats.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Job Application Stats</h1>
+
+      <div class="progress-section">
+        <div class="progress-bar">
+          <h2>Interviews Scheduled</h2>
+          <div class="progress">
+            <div class="progress-fill" id="interviewsProgress"></div>
+          </div>
+        </div>
+
+        <div class="progress-bar">
+          <h2>Offers Received</h2>
+          <div class="progress">
+            <div class="progress-fill" id="offersProgress"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <h2>Application Status Breakdown</h2>
+        <canvas id="statusPieChart"></canvas>
+
+        <h2>Industry Distribution</h2>
+        <canvas id="industryPieChart"></canvas>
+      </div>
+
+      <div class="metric-section">
+        <h2>Success Rate</h2>
+        <canvas id="successRateChart"></canvas>
+      </div>
+
+      <div class="summary-section">
+        <h2>Total Applications Sent: <span id="totalApplications">0</span></h2>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Section</title>
+    <link rel="stylesheet" href="account.css" />
+  </head>
+  <body>
+    <header>
+      <button id="editBtn">Edit</button>
+      <button id="backBtn">Back</button>
+    </header>
+    <main>
+      <section id="accountDetails">
+        <h1>Account Details</h1>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Phone:</strong> <span id="phone"></span></p>
+        <p><strong>Location:</strong> <span id="location"></span></p>
+        <p><strong>Career Goals:</strong> <span id="careerGoals"></span></p>
+        <p>
+          <strong>Job Preferences:</strong> <span id="jobPreferences"></span>
+        </p>
+        <p><strong>Skills:</strong> <span id="skills"></span></p>
+      </section>
+
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Edit Details</h2>
+          <form id="editForm">
+            <label for="name">Name:</label>
+            <input type="text" id="nameInput" name="name" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="emailInput" name="email" />
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phoneInput" name="phone" />
+
+            <label for="location">Location:</label>
+            <input type="text" id="locationInput" name="location" />
+
+            <label for="careerGoals">Career Goals:</label>
+            <input type="text" id="careerGoalsInput" name="careerGoals" />
+
+            <label for="jobPreferences">Job Preferences:</label>
+            <input type="text" id="jobPreferencesInput" name="jobPreferences" />
+
+            <label for="skills">Skills:</label>
+            <input type="text" id="skillsInput" name="skills" />
+
+            <button type="submit">Update</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="account.js"></script>
+  </body>
+</html>

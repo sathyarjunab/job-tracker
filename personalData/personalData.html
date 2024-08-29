@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="./personalData.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Personal Information</h1>
+      <form id="additional-info-form">
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter your location (City, Country)"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="careerGoals">Career Goals</label>
+          <textarea
+            id="careerGoals"
+            name="careerGoals"
+            placeholder="Describe your career goals"
+            rows="5"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="jobPreferences">Job Preferences</label>
+          <textarea
+            id="jobPreferences"
+            name="jobPreferences"
+            placeholder="Preferred job roles, industries, etc."
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Skills</label>
+          <textarea
+            id="skills"
+            name="skills"
+            placeholder="List your key skills"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="education">Educational Background</label>
+          <textarea
+            id="education"
+            name="education"
+            placeholder="Describe your education (degrees, institutions, etc.)"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Save Information</button>
+      </form>
+    </div>
+
+    <script src="./personalData.js"></script>
+  </body>
+</html>
